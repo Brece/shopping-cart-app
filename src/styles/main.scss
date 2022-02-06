@@ -1,0 +1,14 @@
+@import 'reset';
+
+$hspace: 20px;
+$vspace: 20px;
+
+$font-size: 16px;
+$font-small: 14px;
+$font-medium: 22px;
+$font-large: 30px;
+$font-xlarge: 42px;
+
+* { box-sizing: border-box; }
+
+.o-wrap { max-width: 900px; }
