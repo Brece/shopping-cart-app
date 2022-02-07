@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
+import Header from './components/Header';
 
 const App = () => {
 	return (
 		<div className='c-app'>
-		<header className='c-app__header'>
-			xxx
-		</header>
+			<Header className='c-app__header'>
+				xxx
+			</Header>
 		</div>
 );
 }
