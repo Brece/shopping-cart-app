@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import { heroInfoArray, eventInfoArray } from "../helpers/DataHelper";
+import HeroSection from "./HeroSection";
+import EventSection from "./EventSection";
+import Services from "./Services";
 
-const Home = (props) => {
+// state for hero image slider, and maybe for customer reviews
+const Home = () => {
+    const [heroInfo, setHeroInfo] = useState(heroInfoArray);
+    const [eventInfo, setEventInfo] = useState(eventInfoArray);
+
     return (
-        <section>Home xxx</section>
+        <section>
+            <HeroSection heroInfo={heroInfo} />
+            <EventSection eventInfo={eventInfo} />
+            <Services />
+        </section>
     );
 }
 

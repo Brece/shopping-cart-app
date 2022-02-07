@@ -52,6 +52,53 @@ table {
   border-spacing: 0;
 }
 
+.c-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: aquamarine;
+}
+
+nav {
+  width: 50%;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav li {
+  margin-left: 10px;
+}
+
+.c-footer {
+  background-color: beige;
+}
+
+.c-hero {
+  background-color: greenyellow;
+}
+
+.c-event {
+  background-color: burlywood;
+}
+
+.c-services {
+  background-color: pink;
+}
+
+.c-newsletter {
+  background-color: red;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

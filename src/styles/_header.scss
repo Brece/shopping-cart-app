@@ -1,0 +1,16 @@
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+nav {
+    width: 50%;
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    li {
+        margin-left: $hspace/2;
+    }
+}
