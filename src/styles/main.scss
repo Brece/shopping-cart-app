@@ -23,8 +23,10 @@
 
 * { box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
-font-family: 'Montserrat', Georgia, Verdana, sans-serif;
+    font-family: 'Montserrat', Georgia, Verdana, sans-serif;
 }
 
 a { text-decoration: none; }
@@ -43,6 +45,8 @@ a { text-decoration: none; }
 
 .u-justify-space-between { justify-content: space-between; }
 
+.c-layout { position: relative; }
+
 .c-btn {
     background-color: $color-primary;
     text-transform: uppercase;
@@ -59,5 +63,34 @@ a { text-decoration: none; }
         width: 100%;
         padding: $vspace $hspace*2;
         color: #fff;
+    }
+}
+.c-btn-top {
+    position: fixed;
+    z-index: 5;
+    right: 20px;
+    bottom: 80px;
+    width: 32px;
+    height: 32px;
+    background-color: $color-primary;
+    border: 1px solid $color-bg-light;
+    color: $color-bg-light;
+    font-size: $font-size-medium;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s ease-in-out;
+
+    &.is-active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    &:hover { cursor: pointer; }
+
+    svg {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
