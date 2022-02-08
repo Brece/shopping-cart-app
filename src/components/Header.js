@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/MyOnlineStore-logo/vector/default-monochrome.svg';
 
 const Header = (props) => {
@@ -21,10 +23,13 @@ const Header = (props) => {
                         <Link to='/shop'>Shop</Link>
                     </li>
                     <li>
-                        <Link to='/cart'>Iconxxx<span>Cart</span></Link>
+                        <Link to='/contact'>Contact</Link>
                     </li>
                     <li>
-                        <Link to='/contact'>Contact</Link>
+                        <Link to='/cart'>
+                            <span>Cart</span>
+                            <FontAwesomeIcon icon={faShoppingCart} />
+                        </Link>
                     </li>
                 </ul>
             </nav>
