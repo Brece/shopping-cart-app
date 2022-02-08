@@ -27,6 +27,37 @@ body {
 font-family: 'Montserrat', Georgia, Verdana, sans-serif;
 }
 
+a { text-decoration: none; }
+
 /*=========================================================*/
 
-.o-wrap { max-width: 900px; }
+.o-wrap {
+    max-width: 1100px; 
+    margin: 0 auto;
+}
+.o-wrap--flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.u-justify-space-between { justify-content: space-between; }
+
+.c-btn {
+    background-color: $color-primary;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+    &:hover {
+        color: $color-primary;
+        background-color: $color-bg-light;
+
+        a { color: $color-primary; }
+    }
+    a{
+        display: block;
+        width: 100%;
+        padding: $vspace $hspace*2;
+        color: #fff;
+    }
+}

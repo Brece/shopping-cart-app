@@ -1,3 +1,26 @@
 .c-newsletter {
-    background-color: red;
+    margin-bottom: $vspace*2;
+    padding: $vspace*2 0;
+    background-color: $color-primary;
+
+    h2 {
+        font-size: $font-large;
+        font-weight: 700;
+        color: $color-bg-light;
+    }
+}
+.c-newsletter__form {
+    display: flex;
+    input {
+        width: 300px;
+        margin-right: $hspace/2;
+        padding: $vspace/2 $hspace/2;
+        font-size: $font-size;
+        border: none;
+    }
+}
+.c-btn--subscribe {
+    padding: $vspace/2 $hspace*2;
+    color: $color-bg-light;
+    border: 1px solid $color-bg-light;
 }

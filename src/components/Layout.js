@@ -6,7 +6,6 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Layout = () => {
-	// TODO: to-top button for each site
 	return (
 		<div className='c-layout'>
 			<Header />

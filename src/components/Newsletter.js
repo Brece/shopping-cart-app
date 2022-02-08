@@ -10,11 +10,13 @@ const Newsletter = () => {
 
     return (
         <section className='c-newsletter'>
-            <h2>Subscribe Our Newsletter</h2>
-            <form onSubmit={handleSubmit}>
-                <input type='email' placeholder='Enter Email Address' required />
-                <button type='submit'>subscribe</button>
-            </form>
+            <div className='o-wrap o-wrap--flex u-justify-space-between'>
+                <h2>Subscribe Our Newsletter</h2>
+                <form onSubmit={handleSubmit} className='c-newsletter__form'>
+                    <input type='email' placeholder='Enter Email Address' required />
+                    <button type='submit' className='c-btn c-btn--subscribe'>subscribe</button>
+                </form>
+            </div>
         </section>
     );
 }
