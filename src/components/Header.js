@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/MyOnlineStore-logo/vector/default-monochrome.svg';
 
 const Header = (props) => {
     return (
         <header className='c-header'>
             <div>
-                <img src='#' alt='Company Logo' />
+                <img src={logo} alt='Company Logo' />
                 <h2>MyOnlineStore</h2>
             </div>
             <nav>
