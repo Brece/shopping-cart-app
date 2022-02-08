@@ -109,12 +109,61 @@ table {
 }
 
 .c-footer {
-  padding-bottom: 20px;
   background-color: #272727;
+  color: #F9F9F9;
 }
 
 .c-footer__logo {
+  margin-bottom: 20px;
   width: 200px;
+}
+
+.c-footer__socials__items svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.c-footer__socials__items svg:hover {
+  color: #CD8B7C;
+}
+
+.c-footer__contact {
+  width: 50%;
+}
+
+.c-footer__contact h4 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.c-footer__contact__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.c-footer__contact__item svg {
+  margin-right: 20px;
+  width: 24px;
+}
+
+.c-footer__payment {
+  padding: 5px 0;
+  border-top: 1px solid #3C3C3C;
+}
+
+.c-footer__payment p {
+  font-size: 14px;
+}
+
+.c-footer__payment__options img {
+  margin-right: 20px;
+  width: 60px;
+  height: 45px;
 }
 
 .c-hero {

@@ -1,5 +1,46 @@
 .c-footer {
-    padding-bottom: $vspace;
     background-color: $color-bg-dark;
+    color: $color-bg-light;
 }
-.c-footer__logo { width: 200px; }
+.c-footer__logo {
+    margin-bottom: $vspace;
+    width: 200px;
+}
+.c-footer__socials__items {
+    svg {
+        width: 24px;
+        height: 24px;
+        margin-right: $hspace/2;
+        transition: color .3s ease-in-out;
+
+        &:hover { color: $color-primary; }
+    }
+}
+.c-footer__contact{
+    width: 50%;
+
+    h4 {
+        margin-bottom: $vspace;
+        font-weight: 700;
+    }
+}
+.c-footer__contact__item {
+    display: flex;
+    margin-bottom: $vspace;
+    svg {
+        margin-right: $hspace;
+        width: 24px;
+    }
+}
+.c-footer__payment{
+    padding: $vspace/4 0;
+    border-top: 1px solid #3C3C3C;
+    p { font-size: $font-size-small;}
+}
+.c-footer__payment__options {
+    img {
+        margin-right: $hspace;
+        width: 60px;
+        height: 45px;
+    }
+}
