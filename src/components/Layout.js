@@ -6,7 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Layout = () => {
-	const handleScroll = () => {
+	const handleStickyBtn = () => {
 		const scrollToTopBtn = document.querySelector('.c-btn-top');
 		let scrollTotal = window.scrollY;
 
@@ -23,8 +23,8 @@ const Layout = () => {
 	}
 
 	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+		window.addEventListener('scroll', handleStickyBtn);
+		return () => window.removeEventListener('scroll', handleStickyBtn);
 	}, []);
 
 	return (

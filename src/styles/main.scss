@@ -34,7 +34,9 @@ a { text-decoration: none; }
 /*=========================================================*/
 
 .o-wrap {
-    max-width: 1100px; 
+    position: relative;
+    max-width: 1100px;
+    height: 100%;
     margin: 0 auto;
 }
 .o-wrap--flex {
@@ -45,9 +47,13 @@ a { text-decoration: none; }
 
 .u-justify-space-between { justify-content: space-between; }
 
-.c-layout { position: relative; }
+.c-layout {
+    position: relative;
+    // overflow-x: hidden;
+}
 
 .c-btn {
+    display: inline-block;
     background-color: $color-primary;
     text-transform: uppercase;
     border-radius: 3px;
@@ -70,8 +76,8 @@ a { text-decoration: none; }
     z-index: 5;
     right: 20px;
     bottom: 80px;
-    width: 32px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     background-color: $color-primary;
     border: 1px solid $color-bg-light;
     color: $color-bg-light;

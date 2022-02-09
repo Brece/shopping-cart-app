@@ -1,3 +1,74 @@
 .c-hero {
-    background-color: greenyellow;
+    position: relative;
+    &:hover .c-hero__arrow { opacity: 1; }
+}
+.c-hero__slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    transition: all .3s ease-in-out;
+}
+.c-hero__slider__banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 1s ease-in-out;
+}
+.c-hero__slider__banner:nth-child(1) {
+    opacity: 1;
+    z-index: 1;
+}
+.c-hero__slider__banner__content {
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 30%;
+
+    p {
+        margin-bottom: $vspace;
+    }
+
+    h1 {
+        margin-bottom: $vspace*1.5;
+        font-size: $font-size-xlarge;
+        font-weight: 700;
+    }
+}
+.c-hero__arrow {
+    position: absolute;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background-color: $color-bg-light;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-primary;
+        color: $color-bg-light;
+    }
+
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.c-hero__arrow--left {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.c-hero__arrow--right {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }

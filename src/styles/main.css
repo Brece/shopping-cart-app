@@ -55,8 +55,6 @@ table {
 .c-header {
   padding: 30px 0;
   background-color: #F9F9F9;
-  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .c-header__logo {
@@ -167,7 +165,95 @@ table {
 }
 
 .c-hero {
-  background-color: greenyellow;
+  position: relative;
+}
+
+.c-hero:hover .c-hero__arrow {
+  opacity: 1;
+}
+
+.c-hero__slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.c-hero__slider__banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  z-index: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.c-hero__slider__banner:nth-child(1) {
+  opacity: 1;
+  z-index: 1;
+}
+
+.c-hero__slider__banner__content {
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 30%;
+}
+
+.c-hero__slider__banner__content p {
+  margin-bottom: 20px;
+}
+
+.c-hero__slider__banner__content h1 {
+  margin-bottom: 30px;
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.c-hero__arrow {
+  position: absolute;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-color: #F9F9F9;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  opacity: 0;
+}
+
+.c-hero__arrow:hover {
+  cursor: pointer;
+  background-color: #CD8B7C;
+  color: #F9F9F9;
+}
+
+.c-hero__arrow svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.c-hero__arrow--left {
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.c-hero__arrow--right {
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .c-event {
@@ -238,7 +324,9 @@ a {
 
 /*=========================================================*/
 .o-wrap {
+  position: relative;
   max-width: 1100px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -265,6 +353,7 @@ a {
 }
 
 .c-btn {
+  display: inline-block;
   background-color: #CD8B7C;
   text-transform: uppercase;
   border-radius: 3px;
@@ -293,8 +382,8 @@ a {
   z-index: 5;
   right: 20px;
   bottom: 80px;
-  width: 32px;
-  height: 32px;
+  width: 50px;
+  height: 50px;
   background-color: #CD8B7C;
   border: 1px solid #F9F9F9;
   color: #F9F9F9;

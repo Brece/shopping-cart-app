@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/MyOnlineStore-logo/vector/default-monochrome.svg';
 
-const Header = (props) => {
+const Header = () => {
     return (
         <header className='c-header'>
             <div className='o-wrap o-wrap--flex u-justify-space-between'>
