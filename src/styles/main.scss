@@ -4,6 +4,7 @@
 @import 'header';
 @import 'footer';
 @import 'about';
+@import 'contact';
 @import 'heroSection';
 @import 'teamSection';
 @import 'contentSection';
@@ -72,11 +73,13 @@ a {
     display: inline-block;
     background-color: $color-primary;
     text-transform: uppercase;
+    border: 1px solid $color-bg-dark;
     border-radius: 3px;
     transition: all .3s ease-in-out;
     &:hover {
         color: $color-primary;
         background-color: $color-bg-light;
+        cursor: pointer;
 
         a { color: $color-primary; }
     }

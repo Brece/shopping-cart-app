@@ -27,7 +27,7 @@ const Footer = (props) => {
                     <h4>Contact Info</h4>
                     <div className='c-footer__contact__item'>
                         <FontAwesomeIcon icon={faMapMarkerAlt} />
-                        <p>123 Street, Old Trafford, New South London , UK</p>
+                        <p>123 Street, Old Trafford, New South London, UK</p>
                     </div>
                     <div className='c-footer__contact__item'>
                         <FontAwesomeIcon icon={faEnvelope} />

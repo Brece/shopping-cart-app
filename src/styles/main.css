@@ -169,6 +169,171 @@ table {
   margin-bottom: 80px;
 }
 
+.c-contact__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.c-contact__info__item {
+  width: calc(33.33% - 40px);
+  margin: 0 20px 20px;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.2);
+}
+
+.c-contact__info__item h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.c-contact__info__item p {
+  font-size: 14px;
+  color: #272727;
+}
+
+.c-contact__info__item__icon {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  border: 1px solid #CD8B7C;
+  color: #CD8B7C;
+  overflow: hidden;
+}
+
+.c-contact__info__item__icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  -webkit-transition: color .6s ease;
+  transition: color .6s ease;
+}
+
+.c-contact__info__item__icon::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  border-radius: 50%;
+  background-color: #CD8B7C;
+  -webkit-transition: -webkit-transform .6s ease;
+  transition: -webkit-transform .6s ease;
+  transition: transform .6s ease;
+  transition: transform .6s ease, -webkit-transform .6s ease;
+}
+
+.c-contact__info__item:hover .c-contact__info__item__icon::after {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.c-contact__info__item:hover .c-contact__info__item__icon {
+  color: #F9F9F9;
+}
+
+.c-contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c-contact__form__content {
+  width: calc(50% - 40px);
+  margin-right: 40px;
+}
+
+.c-contact__form__content h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.c-contact__form__content p {
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.c-contact__form__content__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.c-contact__form__content__input__group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.c-contact__form__content__input__group label {
+  width: 40%;
+  margin-right: 20px;
+  font-weight: 700;
+  color: #272727;
+}
+
+.c-contact__form__content__input__group input, .c-contact__form__content__input__group textarea {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 10px 10px;
+  font-size: 16px;
+}
+
+.c-contact__form__content__input__group__error {
+  position: absolute;
+  left: calc(40% + 20px);
+  bottom: -30px;
+  font-size: 14px;
+  color: #f9435e;
+  visibility: hidden;
+}
+
+.c-contact__form__content__input__group__error.is-invalid {
+  visibility: visible;
+}
+
+.c-contact__form__map {
+  width: 50%;
+}
+
+.c-contact__form__map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.c-btn--form {
+  display: block;
+  padding: 20px 40px;
+  color: #F9F9F9;
+}
+
 .c-hero {
   position: relative;
   margin-top: -80px;
@@ -467,7 +632,6 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 80px;
 }
 
 .c-notFound h2 {
@@ -570,6 +734,7 @@ a {
   display: inline-block;
   background-color: #CD8B7C;
   text-transform: uppercase;
+  border: 1px solid #272727;
   border-radius: 3px;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -578,6 +743,7 @@ a {
 .c-btn:hover {
   color: #CD8B7C;
   background-color: #F9F9F9;
+  cursor: pointer;
 }
 
 .c-btn:hover a {
