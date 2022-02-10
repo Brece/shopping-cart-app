@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <section>
             <HeroSection heroInfo={heroInfo} />
-            <ContentSection eventInfo={eventInfo} />
+            <ContentSection contentInfo={eventInfo} />
             <Services />
         </section>
     );

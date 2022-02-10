@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ContentSection from './ContentSection';
+import { aboutUsArray } from '../helpers/DataHelper';
 
 const About = (props) => {
+    const [aboutInfo, setAboutInfo] = useState(aboutUsArray)
     return (
-        <section>About xxx</section>
+        <ContentSection contentInfo={aboutInfo} />
     );
 }
 

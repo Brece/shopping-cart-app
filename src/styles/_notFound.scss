@@ -1,12 +1,12 @@
 .c-notFound {
     flex-direction: column;
-    margin-top: $vspace*4;
     margin-bottom: $vspace*4;
 
     h2 {
         margin-bottom: $vspace*3;
         font-size: $font-size-xlarge;
         font-weight: 700;
+        color: $color-primary;
     }
 
     p {
