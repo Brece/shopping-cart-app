@@ -165,10 +165,13 @@ table {
   height: 45px;
 }
 
+.c-about {
+  margin-bottom: 80px;
+}
+
 .c-hero {
   position: relative;
   margin-top: -80px;
-  margin-bottom: 80px;
 }
 
 .c-hero:hover .c-hero__arrow {
@@ -259,8 +262,61 @@ table {
           transform: translateY(-50%);
 }
 
-.c-content {
+.c-team__info {
   margin-bottom: 40px;
+  text-align: center;
+}
+
+.c-team__info h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.c-team__info p {
+  line-height: 1.5;
+}
+
+.c-team__member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.c-team__member__item {
+  width: calc(25% - 40px);
+  margin: 0 20px 20px;
+}
+
+.c-team__member__item h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.c-team__member__item p {
+  font-size: 14px;
+  color: #272727;
+}
+
+.c-team__member__item__img {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-top: 100%;
+}
+
+.c-team__member__item__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .c-content__item {
@@ -328,10 +384,6 @@ table {
 
 .c-content__item__info a:hover {
   color: #272727;
-}
-
-.c-services {
-  margin-bottom: 60px;
 }
 
 .c-services__item {
@@ -492,8 +544,26 @@ a {
   margin-right: -20px;
 }
 
+.u-margin-bottom {
+  margin-bottom: 80px;
+}
+
 .c-layout {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.c-layout__content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .c-btn {

@@ -25,11 +25,11 @@ const ContentSection = (props) => {
     }
 
     return (
-        <div className='o-wrap c-content'>
+        <section className='o-wrap u-margin-bottom c-content'>
             <div className='o-wrap--flex u-offset'>
                 {renderContentSections()}
             </div>
-        </div>
+        </section>
     );
 }
 

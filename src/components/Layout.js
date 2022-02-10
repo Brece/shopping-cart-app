@@ -30,7 +30,9 @@ const Layout = () => {
 	return (
 		<div className='c-layout'>
 			<Header />
-			<Outlet />
+			<section className='c-layout__content'>
+				<Outlet />
+			</section>
 			<Footer />
 			<div className='c-btn-top' onClick={handleScrollToTop}>
 				<FontAwesomeIcon icon={faChevronUp} />

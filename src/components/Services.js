@@ -4,7 +4,7 @@ import { faTruck, faHandHoldingDollar, faHeadset } from '@fortawesome/free-solid
 
 const Services = () => {
     return (
-        <div className='o-wrap c-services'>
+        <section className='o-wrap u-margin-bottom c-services'>
             <div className='o-wrap--flex u-offset'>
                 <div className='c-services__item'>
                     <div className='c-services__item__icon'>
@@ -28,7 +28,7 @@ const Services = () => {
                     <p>If you are going to use of Lorem, you need to be sure there anything use of Lorem, you need </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

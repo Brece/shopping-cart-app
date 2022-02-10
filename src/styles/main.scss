@@ -5,6 +5,7 @@
 @import 'footer';
 @import 'about';
 @import 'heroSection';
+@import 'teamSection';
 @import 'contentSection';
 @import 'services';
 @import 'newsletter';
@@ -57,11 +58,15 @@ a {
     margin-left: -$hspace;
     margin-right: -$hspace;
 }
+.u-margin-bottom { margin-bottom: $vspace*4; }
 
 .c-layout {
     position: relative;
-    // overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+.c-layout__content { flex-grow: 1; }
 
 .c-btn {
     display: inline-block;

@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import ContentSection from './ContentSection';
-import { aboutUsArray } from '../helpers/DataHelper';
+import TeamSection from './TeamSection';
+import Services from './Services';
+import { aboutUsArray, employeeArray } from '../helpers/DataHelper';
 
-const About = (props) => {
+const About = () => {
     const [aboutInfo, setAboutInfo] = useState(aboutUsArray)
+    const [teamInfo, setTeamInfo] = useState(employeeArray)
     return (
-        <ContentSection contentInfo={aboutInfo} />
+        <section className='c-about'>
+            <ContentSection contentInfo={aboutInfo} />
+            <TeamSection contentInfo={teamInfo} />
+            <Services />
+        </section>
     );
 }
 

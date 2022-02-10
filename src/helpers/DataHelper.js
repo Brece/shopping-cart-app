@@ -5,6 +5,10 @@ import heroBanner3 from '../assets/images/hero-banner-3.jpg';
 import eventImage1 from '../assets/images/event-img-1.png';
 import eventImage2 from '../assets/images/event-img-2.png';
 import aboutUs from '../assets/images/about-us.jpg';
+import employee1 from '../assets/images/employee-1.jpg';
+import employee2 from '../assets/images/employee-2.jpg';
+import employee3 from '../assets/images/employee-3.jpg';
+import employee4 from '../assets/images/employee-4.jpg';
 
 const heroInfoArray = [
     {
@@ -55,6 +59,37 @@ const aboutUsArray = [
         backgroundColor: '#fff',
         id: uniqid()
     }
-]
+];
 
-export { heroInfoArray, eventInfoArray, aboutUsArray };
+const employeeArray = [
+    {
+        url: employee1,
+        name: 'Marcelyn Rion',
+        title: 'Head of HR',
+        alt: 'Girl with black hat and red dress in dessert',
+        id: uniqid()
+    },
+    {
+        url: employee2,
+        name: 'Eneida Breheny',
+        title: 'Customer Service',
+        alt: 'Young woman with collared shirt smiling',
+        id: uniqid()
+    },
+    {
+        url: employee3,
+        name: 'Vincenz Stred ',
+        title: 'CEO',
+        alt: 'Middle-aged man with glasses smiling',
+        id: uniqid()
+    },
+    {
+        url: employee4,
+        name: 'Geraint Guinane',
+        title: 'Manager',
+        alt: 'Well-dressed young man with brown shirt and blue blazer',
+        id: uniqid()
+    }
+];
+
+export { heroInfoArray, eventInfoArray, aboutUsArray, employeeArray };

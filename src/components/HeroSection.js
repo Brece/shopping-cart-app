@@ -81,7 +81,7 @@ const HeroSection = (props) => {
     });
 
     return (
-        <div className='c-hero'>
+        <section className='u-margin-bottom c-hero'>
             <div className='c-hero__slider'>
                 {renderHeroSections()}
             </div>
@@ -91,7 +91,7 @@ const HeroSection = (props) => {
             <div className='c-hero__arrow c-hero__arrow--right'>
                 <FontAwesomeIcon icon={faChevronRight} />
             </div>
-        </div>
+        </section>
     );
 }
 
