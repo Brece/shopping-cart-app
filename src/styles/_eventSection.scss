@@ -1,3 +1,39 @@
 .c-event {
-    background-color: burlywood;
+    margin-bottom: $vspace*2;
+}
+.c-event__item {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(50% - #{$hspace*2});
+    margin: 0 $hspace $vspace*2;
+    &:hover img { transform: scale(1.1); }
+}
+.c-event__item__img {
+    width: 50%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        transition: transform .3s ease-in-out;
+    }
+}
+.c-event__item__info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        font-size: $font-size-large;
+        font-weight: 700;
+        margin-bottom: $vspace/2;
+    }
+
+    p { margin-bottom: $vspace/2; }
+
+    a {
+        text-transform: capitalize;
+        color: #000;
+        &:hover { color: $color-primary; }
+    }
 }

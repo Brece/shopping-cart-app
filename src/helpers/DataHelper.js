@@ -31,12 +31,14 @@ const eventInfoArray = [
         url: eventImage1,
         teaser: 'Super Sale',
         title: 'New Collection',
+        backgroundColor: '#FEFFB6',
         id: uniqid()
     },
     {
         url: eventImage2,
         teaser: 'Sale 40% Off',
         title: 'New Season',
+        backgroundColor: '#CCFCFC',
         id: uniqid()
     }
 ]

@@ -1,3 +1,39 @@
 .c-services {
-    background-color: pink;
+    margin-bottom: $vspace*3;
+}
+.c-services__item {
+    position: relative;
+    width: calc(33.33% - #{$hspace*2});
+    margin: 0 $hspace $vspace;
+    padding: 0 $hspace;
+    align-self: flex-start;
+    text-align: center;
+
+    h3 {
+        margin-bottom: $vspace/2;
+        font-size: $font-size;
+        font-weight: 700;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+}
+.c-services__item::after {
+    position: absolute;
+    content: '';
+    top: 20px;
+    right: -20px;
+    width: 1px;
+    height: 120px;
+    background-color: $color-bg-dark;
+}
+.c-services__item:last-child::after { width: 0; }
+.c-services__item__icon {
+    margin-bottom: $vspace;
+    svg {
+        width: 40px;
+        height: 40px;
+        color: $color-primary;
+    }
 }

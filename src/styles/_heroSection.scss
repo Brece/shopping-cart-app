@@ -1,5 +1,6 @@
 .c-hero {
     position: relative;
+    margin-bottom: $vspace*4;
     &:hover .c-hero__arrow { opacity: 1; }
 }
 .c-hero__slider {
