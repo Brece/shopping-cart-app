@@ -1,14 +1,14 @@
-.c-event {
+.c-content {
     margin-bottom: $vspace*2;
 }
-.c-event__item {
+.c-content__item {
     display: flex;
     flex-wrap: wrap;
     width: calc(50% - #{$hspace*2});
     margin: 0 $hspace $vspace*2;
     &:hover img { transform: scale(1.1); }
 }
-.c-event__item__img {
+.c-content__item__img {
     width: 50%;
     overflow: hidden;
 
@@ -17,7 +17,7 @@
         transition: transform .3s ease-in-out;
     }
 }
-.c-event__item__info {
+.c-content__item__info {
     width: 50%;
     display: flex;
     flex-direction: column;

@@ -257,11 +257,11 @@ table {
           transform: translateY(-50%);
 }
 
-.c-event {
+.c-content {
   margin-bottom: 40px;
 }
 
-.c-event__item {
+.c-content__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,17 +271,17 @@ table {
   margin: 0 20px 40px;
 }
 
-.c-event__item:hover img {
+.c-content__item:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.c-event__item__img {
+.c-content__item__img {
   width: 50%;
   overflow: hidden;
 }
 
-.c-event__item__img img {
+.c-content__item__img img {
   width: 100%;
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: -webkit-transform .3s ease-in-out;
@@ -289,7 +289,7 @@ table {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-.c-event__item__info {
+.c-content__item__info {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,22 +303,22 @@ table {
           justify-content: center;
 }
 
-.c-event__item__info h2 {
+.c-content__item__info h2 {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.c-event__item__info p {
+.c-content__item__info p {
   margin-bottom: 10px;
 }
 
-.c-event__item__info a {
+.c-content__item__info a {
   text-transform: capitalize;
   color: #000;
 }
 
-.c-event__item__info a:hover {
+.c-content__item__info a:hover {
   color: #CD8B7C;
 }
 

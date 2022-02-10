@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { heroInfoArray, eventInfoArray } from "../helpers/DataHelper";
 import HeroSection from "./HeroSection";
-import EventSection from "./EventSection";
+import ContentSection from "./ContentSection";
 import Services from "./Services";
 
 // state for hero image slider, and maybe for customer reviews
@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <section>
             <HeroSection heroInfo={heroInfo} />
-            <EventSection eventInfo={eventInfo} />
+            <ContentSection eventInfo={eventInfo} />
             <Services />
         </section>
     );

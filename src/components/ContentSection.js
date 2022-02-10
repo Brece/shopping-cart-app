@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const EventSection = (props) => {
-    const renderEventSections = () => {
+const ContentSection = (props) => {
+    const renderContentSections = () => {
         return (
             props.eventInfo.map((item) => {
                 return (
-                    <div className='c-event__item' style={{ backgroundColor: item.backgroundColor }} key={item.id}>
-                        <div className='c-event__item__img'>
+                    <div className='c-content__item' style={{ backgroundColor: item.backgroundColor }} key={item.id}>
+                        <div className='c-content__item__img'>
                             <img src={item.url} alt='Event' />
                         </div>
-                        <div className='c-event__item__info'>
+                        <div className='c-content__item__info'>
                             <h2>{item.title}</h2>
                             <p>{item.teaser}</p>
                             <Link to='/shop'>shop now</Link>
@@ -22,12 +22,12 @@ const EventSection = (props) => {
     }
 
     return (
-        <div className='o-wrap c-event'>
+        <div className='o-wrap c-content'>
             <div className='o-wrap--flex u-offset'>
-                {renderEventSections()}
+                {renderContentSections()}
             </div>
         </div>
     );
 }
 
-export default EventSection;
+export default ContentSection;
