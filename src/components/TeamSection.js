@@ -18,13 +18,15 @@ const TeamSection = (props) => {
     }
 
     return (
-        <section className='o-wrap u-margin-bottom c-team'>
-            <div className='c-team__info'>
-                <h2>Our Team Members</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            </div>
-            <div className='o-wrap--flex u-offset c-team__member'>
-                {renderTeamMember()}
+        <section className='u-margin-bottom u-padding c-team'>
+            <div className='o-wrap'>
+                <div className='c-team__info'>
+                    <h2>Our Team Members</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+                <div className='o-wrap--flex u-offset c-team__member'>
+                    {renderTeamMember()}
+                </div>
             </div>
         </section>
     );

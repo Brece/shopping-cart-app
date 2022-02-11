@@ -1,0 +1,99 @@
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Montserrat', Georgia, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+/*=========================================================*/
+
+.o-wrap {
+    position: relative;
+    max-width: 1100px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.o-wrap--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.u-justify-space-between { justify-content: space-between; }
+.u-offset {
+    margin-left: -$hspace;
+    margin-right: -$hspace;
+}
+.u-margin-bottom { margin-bottom: $vspace*4; }
+.u-padding {
+    padding-top: $vspace*4;
+    padding-bottom: $vspace*4;
+    background-color: $color-bg-light;
+}
+
+.c-layout {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.c-layout__content { flex-grow: 1; }
+
+.c-btn {
+    display: inline-block;
+    background-color: $color-primary;
+    text-transform: uppercase;
+    border: 1px solid $color-bg-dark;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+    &:hover {
+        color: $color-primary;
+        background-color: $color-bg-light;
+        cursor: pointer;
+
+        a { color: $color-primary; }
+    }
+    a{
+        display: block;
+        width: 100%;
+        padding: $vspace $hspace*2;
+        color: #fff;
+    }
+}
+.c-btn-top {
+    position: fixed;
+    z-index: 5;
+    right: 20px;
+    bottom: 80px;
+    width: 50px;
+    height: 50px;
+    background-color: $color-primary;
+    border: 1px solid $color-bg-light;
+    color: $color-bg-light;
+    font-size: $font-size-medium;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s ease-in-out;
+
+    &.is-active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    &:hover { cursor: pointer; }
+
+    svg {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

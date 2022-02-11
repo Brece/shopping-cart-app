@@ -1,6 +1,5 @@
 .c-contact__info {
     display: flex;
-    margin-bottom: $vspace*4;
 }
 .c-contact__info__item {
     width: calc(33.33% - #{$hspace*2});
@@ -114,7 +113,6 @@
     visibility: hidden; 
     &.is-invalid { visibility: visible; }
 }
-
 .c-contact__form__map {
     width: 50%;
 
