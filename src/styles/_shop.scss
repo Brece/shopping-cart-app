@@ -1,0 +1,54 @@
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.c-shop__loading {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        animation: spin 2s infinite;
+    }
+}
+
+.c-shop__sidebar {
+    width: 300px;
+    margin-right: $hspace*2;
+    align-self: flex-start;
+
+    h3 {
+        margin-bottom: $vspace*2;
+        font-size: $font-size-medium;
+        font-weight: 700;
+    }
+}
+.c-shop__sidebar__category {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $vspace;
+    &:hover {
+        cursor: pointer;
+        color: $color-primary;
+    }
+    &.is-active { color: $color-primary; }
+}
+.c-shop__sidebar__category__name {
+    position: relative;
+    padding-left: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    svg {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

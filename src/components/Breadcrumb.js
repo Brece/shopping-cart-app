@@ -20,12 +20,14 @@ const Breadcrumb = () => {
     }
 
     useEffect(() => {
-        console.log(location);
+        // console.log(location);
     });
 
     return (
-        <section className='c-breadcrumb'>
-            <div>{renderPath()}</div>
+        <section className='u-margin-bottom u-padding c-breadcrumb'>
+            <div className='o-wrap'>
+                <div>{renderPath()}</div>
+            </div>
         </section>
     );
 }
