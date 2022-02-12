@@ -29,6 +29,11 @@ const Shop = () => {
     const handleChangePage = ({ selected }) => {
         setPage(selected);
     }
+
+    useEffect (() => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }, [page]);
     // ============ end pagination ==============
 
     const handleState = (data) => {
