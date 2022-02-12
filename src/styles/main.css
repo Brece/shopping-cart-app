@@ -906,6 +906,47 @@ a {
   color: red;
 }
 
+.c-productsGrid__navPagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.c-productsGrid__navPagination li {
+  margin: 8px;
+  padding: 10px;
+  color: #CD8B7C;
+  border: 1px solid #272727;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.c-productsGrid__navPagination li:hover {
+  color: #F9F9F9;
+  background-color: #CD8B7C;
+}
+
+.c-productsGrid__navDisabled {
+  opacity: 0 !important;
+}
+
+.c-productsGrid__navDisabled:hover {
+  cursor: initial;
+}
+
+.c-productsGrid__navActive {
+  color: #F9F9F9 !important;
+  background-color: #CD8B7C;
+}
+
 .c-newsletter {
   margin-bottom: 40px;
   padding: 40px 0;

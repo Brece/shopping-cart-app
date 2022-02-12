@@ -53,3 +53,34 @@
 .c-productsGrid__card__info__price {
     color: red;
 }
+
+// pagination
+.c-productsGrid__navPagination {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+
+    li {
+        margin: 8px;
+        padding: 10px;
+        color: $color-primary;
+        border: 1px solid $color-bg-dark;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 1;
+        transition: all .3s ease-in-out;
+        &:hover {
+            color: $color-bg-light;
+            background-color: $color-primary;
+        }
+    }
+}
+.c-productsGrid__navDisabled {
+    opacity: 0 !important;
+    &:hover { cursor: initial; }
+}
+.c-productsGrid__navActive {
+    color: $color-bg-light !important;
+    background-color: $color-primary;
+}

@@ -12,12 +12,32 @@ const Shop = () => {
     const [filter, setFilter] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    // ============ start pagination ==============
+    const [page, setPage] = useState(0);
+    const [totalPages, setTotalPages] = useState(0)
+    const productsPerPage = 9;
+    
+    const handlePagination = () => {
+        const numberOfProductsViewed = page * productsPerPage;
+        const displayedProducts = filter.slice(
+                numberOfProductsViewed,
+                numberOfProductsViewed + productsPerPage
+            );
+        return displayedProducts;
+    }
+
+    const handleChangePage = ({ selected }) => {
+        setPage(selected);
+    }
+    // ============ end pagination ==============
+
     const handleState = (data) => {
         // initialize products and filter state
         let productsArray = data.map((item) => { return {...item} });
         setProducts(productsArray);
         setFilter(productsArray);
         setLoading(false);
+        setTotalPages(Math.ceil(productsArray.length / productsPerPage));
 
         // initialize categories state
         let categoriesArray = [];
@@ -52,10 +72,12 @@ const Shop = () => {
 
     const handleFilter = (e) => {
         // update filter state for view
+        setPage(0);
         const filterValue = e.currentTarget.dataset.category;
 
         if (filterValue === 'all') {
             setFilter(products);
+            setTotalPages(Math.ceil(products.length / productsPerPage))
             return;
         }
 
@@ -65,6 +87,7 @@ const Shop = () => {
             }
         });
         setFilter(updatedFilter);
+        setTotalPages(Math.ceil(updatedFilter.length / productsPerPage));
 
         handleActiveCategory(e);
     }
@@ -114,7 +137,12 @@ const Shop = () => {
             <div>
                 <div className='o-wrap o-wrap--flex'>
                     {renderSidebar()}
-                    <ProductsGrid filteredProducts={filter} />
+                    <ProductsGrid
+                        filteredProducts={handlePagination()}
+                        page={page}
+                        totalPages={totalPages}
+                        handleChangePage={handleChangePage}
+                    />
                 </div>
             </div>
         );
