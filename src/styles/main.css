@@ -788,6 +788,9 @@ a {
 
 .c-notFound p {
   margin-bottom: 40px;
+}
+
+.c-notFound span {
   font-weight: 700;
 }
 

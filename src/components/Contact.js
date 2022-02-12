@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import uniqid from 'uniqid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapLocationDot, faEnvelopeOpen, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons';
+import Breadcrumb from './Breadcrumb';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -49,6 +50,7 @@ const Contact = () => {
 
     return (
         <section className='c-contact'>
+            <Breadcrumb />
             <div className='o-wrap u-margin-bottom'>
                 <div className='u-offset c-contact__info'>
                     <div className='c-contact__info__item'>
