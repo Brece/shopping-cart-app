@@ -1,10 +1,12 @@
 import React from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const Product = (props) => {
     const params = useParams();
-    const location = useLocation();
-    console.log(params, location);
+
+    // FIXME: remove console.log
+    console.log(props);
+
     return (
         <section className='c-product'>
             product xxx
