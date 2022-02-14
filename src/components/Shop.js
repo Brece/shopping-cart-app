@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import uniqid from 'uniqid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import Breadcrumb from './Breadcrumb';
 import ProductsGrid from './ProductsGrid';
 import loadingImage from '../assets/loading.png';
 
@@ -142,16 +141,14 @@ const Shop = () => {
 
     const renderLoadedSection = () => {
         return (
-            <div>
-                <div className='o-wrap o-wrap--flex'>
-                    {renderSidebar()}
-                    <ProductsGrid
-                        filteredProducts={handlePagination()}
-                        page={page}
-                        totalPages={totalPages}
-                        handleChangePage={handleChangePage}
-                    />
-                </div>
+            <div className='o-wrap o-wrap--flex'>
+                {renderSidebar()}
+                <ProductsGrid
+                    filteredProducts={handlePagination()}
+                    page={page}
+                    totalPages={totalPages}
+                    handleChangePage={handleChangePage}
+                />
             </div>
         );
     }
@@ -174,7 +171,6 @@ const Shop = () => {
 
     return (
         <section className='u-margin-bottom c-shop'>
-            <Breadcrumb />
             { loading ? renderPlaceHolder() : renderLoadedSection() }
         </section>
     );
