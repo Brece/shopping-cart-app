@@ -9,6 +9,7 @@ import loadingImage from '../assets/loading.png';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [categoryCounts, setCategoryCounts] = useState([]);
+    const [filteredValue, setFilteredValue] = useState('all');
     const [filter, setFilter] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -66,6 +67,7 @@ const Shop = () => {
             const request = await fetch('https://fakestoreapi.com/products', {mode: 'cors'});
             const data = await request.json();
             
+            // FIXME: remove console.log
             console.log(data.map(item => item));
             
             handleState(data);
@@ -77,8 +79,9 @@ const Shop = () => {
 
     const handleFilter = (e) => {
         // update filter state for view
-        setPage(0);
         const filterValue = e.currentTarget.dataset.category;
+        setPage(0);
+        setFilteredValue(filterValue);
 
         if (filterValue === 'all') {
             setFilter(products);
@@ -93,18 +96,18 @@ const Shop = () => {
         });
         setFilter(updatedFilter);
         setTotalPages(Math.ceil(updatedFilter.length / productsPerPage));
-
-        handleActiveCategory(e);
     }
 
-    // TODO: display active filter correctly after state has been updated
-    const handleActiveCategory = (e) => {
-        // reset active class
+    const handleActiveCategory = () => {
         const allCategories = document.querySelectorAll('.c-shop__sidebar__category');
-        allCategories.forEach((item) => item.classList.remove('is-active'));
-
-        // highlight current active filter 
-        e.currentTarget.classList.add('is-active');
+        allCategories.forEach((item) => {
+            // highlight current active filter 
+            if (item.dataset.category === filteredValue) {
+                item.classList.add('is-active');
+                return;
+            }
+            item.classList.remove('is-active');
+        });
     }
 
     const renderSidebar = () => {
@@ -160,6 +163,10 @@ const Shop = () => {
             </div>
         );
     }
+
+    useEffect(() => {
+        handleActiveCategory();
+    }, [filteredValue]);
 
     useEffect(() => {
         handleFetchRequest();
