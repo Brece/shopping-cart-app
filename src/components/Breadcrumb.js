@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { useNavigate, useParams } from 'react-router-dom';
 
 const Breadcrumb = () => {
     const location = useLocation();
-    const navigate = useNavigate();
-    const { product } = useParams();
 
     // TODO:
     // Link to the right url
@@ -13,7 +10,6 @@ const Breadcrumb = () => {
     // connect locations with css style ">"
     const renderPath = () => {
         const paths = location.pathname.split('/').filter((x) => x);
-        console.log({product});
         return paths.map((path, index) => {
             return (
                 <Link to={`${path}`} key={index}>

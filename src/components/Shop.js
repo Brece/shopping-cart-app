@@ -67,7 +67,7 @@ const Shop = () => {
             const data = await request.json();
             
             // FIXME: remove console.log
-            console.log(data.map(item => item));
+            // console.log(data.map(item => item));
             
             handleState(data);
             return;
