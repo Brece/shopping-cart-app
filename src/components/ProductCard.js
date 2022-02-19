@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProductCard = (props) => {
+    // pass down product information as "state" in <Link />
     return (
         <div className='c-productCard'>
-            <Link to={`${props.product.title}`}>
+            <Link to={`${props.product.title}`} state={props.product}>
                 <div className='c-productCard__img'>
                     <img src={props.product.image} alt={props.product.title} />
                 </div>
@@ -15,7 +16,6 @@ const ProductCard = (props) => {
                 </div>
             </Link>
         </div>
-
     );
 }
 

@@ -1,20 +1,34 @@
 import React, { useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, NavLink } from 'react-router-dom';
 
 const Breadcrumb = () => {
     const location = useLocation();
 
     // TODO:
-    // Link to the right url
-    // last path location is not a link
+    // Link to the right url (first path link to "/")
+    // last path location is not a link, is highlighted as active
     // connect locations with css style ">"
     const renderPath = () => {
-        const paths = location.pathname.split('/').filter((x) => x);
+        let paths = location.pathname
+            .split('/')
+            .filter((x) => x);
+        
         return paths.map((path, index) => {
-            return (
-                <Link to={`${path}`} key={index}>
+            return ( index === 0
+                ? <NavLink
+                    to={''}
+                    key={index} >
                     {path}
-                </Link>
+                </NavLink>
+
+                : <NavLink
+                    to={`${path}`}
+                    style={ ({isActive}) => {
+                        return { backgroundColor: isActive ? 'red' : '' } 
+                    }}
+                    key={index} >
+                    {path}
+                </NavLink>
             );
         });
     }
