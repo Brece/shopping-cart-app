@@ -316,6 +316,40 @@ a {
   height: 45px;
 }
 
+.c-breadcrumb {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #F9F9F9;
+}
+
+.c-breadcrumb__item {
+  position: relative;
+  display: inline-block;
+  max-width: 650px;
+  margin-bottom: 10px;
+  padding-right: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+
+.c-breadcrumb__item::after {
+  position: absolute;
+  content: '>';
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.c-breadcrumb__item:last-child::after {
+  content: '';
+}
+
+.c-breadcrumb__item--last {
+  color: #CD8B7C;
+}
+
 .c-contact__info {
   display: -webkit-box;
   display: -ms-flexbox;

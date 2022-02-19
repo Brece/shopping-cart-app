@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLocation, Link, NavLink } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 const Breadcrumb = () => {
     const location = useLocation();
@@ -14,21 +14,35 @@ const Breadcrumb = () => {
             .filter((x) => x);
         
         return paths.map((path, index) => {
-            return ( index === 0
-                ? <NavLink
+            if (index === paths.length - 1) {
+                return (
+                    <p className='c-breadcrumb__item c-breadcrumb__item--last' key={index} >
+                        {path}
+                    </p>
+                );
+            }
+
+            if (index === 0) {
+                return (
+                    <Link
+                    className='c-breadcrumb__item'
                     to={''}
                     key={index} >
-                    {path}
-                </NavLink>
+                        {path}
+                    </Link>
+                );
+            }
 
-                : <NavLink
+            return (
+                <Link
+                    className='c-breadcrumb__item'
                     to={`${path}`}
                     style={ ({isActive}) => {
                         return { backgroundColor: isActive ? 'red' : '' } 
                     }}
                     key={index} >
                     {path}
-                </NavLink>
+                </Link>
             );
         });
     }
@@ -39,7 +53,7 @@ const Breadcrumb = () => {
     });
 
     return (
-        <section className='u-margin-bottom u-padding c-breadcrumb'>
+        <section className='u-margin-bottom c-breadcrumb'>
             <div className='o-wrap'>
                 <div>{renderPath()}</div>
             </div>

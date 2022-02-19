@@ -1,1 +1,28 @@
-.c-breadcrumb {}
+.c-breadcrumb {
+    width: 100%;
+    padding: $vspace 0;
+    background-color: $color-bg-light;
+}
+.c-breadcrumb__item {
+    position: relative;
+    display: inline-block;
+    max-width: 650px;
+    margin-bottom: $vspace/2;
+    padding-right: $hspace*1.5;
+    font-weight: 700;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+.c-breadcrumb__item::after {
+    position: absolute;
+    content: '>';
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.c-breadcrumb__item:last-child::after {
+    content: '';
+}
+.c-breadcrumb__item--last{
+    color: $color-primary;
+}
