@@ -12,12 +12,21 @@ const Product = () => {
     console.log(location.state);
 
     return (
-        <section className='c-product'>
-            <p>{location.state.title}</p>
-            <p>{location.state.description}</p>
-            <p>{location.state.price}</p>
-            <p>{location.state.image}</p>
-            <p>{location.state.rating.rate}</p>
+        <section className='o-wrap c-product'>
+            <div>
+                <div>
+                    <img src={location.state.image} alt='Product' />
+                </div>
+                <div>
+                    <h3>{location.state.title}</h3>
+                    <p>icons for delivery & services xxx</p>
+                    <p>{location.state.price}</p>
+                    <p>{location.state.rating.rate}</p>
+                </div>
+            </div>
+            <div>
+                <p>{location.state.description}</p>
+            </div>
         </section>
     );
 }
