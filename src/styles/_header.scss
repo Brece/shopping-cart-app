@@ -12,11 +12,11 @@
     li {
         position: relative;
         margin-left: $hspace/2;
-        &:hover::after {
+        &:hover::before {
             width: 100%;
         }
     }
-    li::after {
+    li::before {
         position: absolute;
         content: '';
         left: 0;
@@ -33,4 +33,19 @@
         color: $color-primary;
     }
     span { margin-right: $hspace/2; }
+}
+.c-header__nav__list__cart__amount {
+    position: absolute;
+    right: -16px;
+    top: -4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $color-bg-dark;
+    background-color: red;
+    color: $color-bg-light;
+    font-weight: 300;
+    font-size: $font-size-small;
+    line-height: 16px;
+    text-align: center;
 }

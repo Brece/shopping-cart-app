@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/MyOnlineStore-logo/vector/default-monochrome.svg';
 
 const Header = () => {
+    const [state, setState] = useState([]);
+    const [amount, setAmount] = useState(0);
+
+    const handleState = () => {
+        const cart = JSON.parse(localStorage.getItem('cart'));
+
+        if (cart !== null) {
+            let totalAmount = 0;
+            cart.forEach(item => {
+                totalAmount += item.amount;
+            });
+            setAmount(totalAmount);
+            setState(cart);
+        }
+    }
+
+    useEffect (() => {
+        handleState();
+
+        // FIXME: delete console.log
+        console.log(JSON.parse(localStorage.getItem('cart')));
+    },[]);
+
     return (
         <header className='c-header'>
             <div className='o-wrap o-wrap--flex u-justify-space-between'>
@@ -25,10 +48,11 @@ const Header = () => {
                         <li>
                             <Link to='/contact'>Contact</Link>
                         </li>
-                        <li>
+                        <li className='c-header__nav__list__cart'>
                             <Link to='/cart'>
                                 <span>Cart</span>
                                 <FontAwesomeIcon icon={faShoppingCart} />
+                                <div className='c-header__nav__list__cart__amount'>{amount}</div>
                             </Link>
                         </li>
                     </ul>

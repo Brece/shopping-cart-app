@@ -226,11 +226,11 @@ a {
   margin-left: 10px;
 }
 
-.c-header__nav__list li:hover::after {
+.c-header__nav__list li:hover::before {
   width: 100%;
 }
 
-.c-header__nav__list li::after {
+.c-header__nav__list li::before {
   position: absolute;
   content: '';
   left: 0;
@@ -251,6 +251,22 @@ a {
 
 .c-header__nav__list span {
   margin-right: 10px;
+}
+
+.c-header__nav__list__cart__amount {
+  position: absolute;
+  right: -16px;
+  top: -4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #272727;
+  background-color: red;
+  color: #F9F9F9;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }
 
 .c-footer {
