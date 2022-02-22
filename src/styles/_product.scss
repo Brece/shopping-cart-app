@@ -1,0 +1,198 @@
+.c-product__info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $vspace*3;
+}
+.c-product__image {
+    position: relative;
+    width: calc(50% - #{$hspace});
+    margin-right: $hspace;
+    padding-top: 50%;
+    border: 1px solid $color-bg-dark;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.c-product__info__text {
+    width: 50%;
+}
+.c-product__info__title {
+    font-size: $font-size-medium;
+    margin-bottom: $vspace;
+}
+.c-product__info__price {
+    margin-bottom: $vspace;
+    font-size: $font-size-medium;
+    font-weight: 700;
+    color: red;
+}
+.c-product__info__teaser {
+    display: inline-block;
+    margin-bottom: $vspace;
+    line-height: 1.5;
+    color: $color-bg-dark
+}
+.c-product__info__text__icons {
+    margin-bottom: $vspace;
+    font-size: $font-size-small;
+
+    li {
+        position: relative;
+        margin-bottom: $vspace/2;
+        padding-left: $hspace*1.5;
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        color: red;
+    }
+}
+.c-product__info__text__rating {
+    margin-bottom: $vspace;
+    
+}
+
+// START display star rating
+:root {
+    --star-color: grey;
+    --star-background: #fc0;
+}
+
+.c-product__info__text__rating__stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+
+    display: inline-block;
+    margin-right: $hspace/2;
+    font-size: 24px;
+    font-family: Times; // make sure ★ appears correctly
+    line-height: 1;
+
+    &::before {
+        content: '★★★★★';
+        letter-spacing: 3px;
+        background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+// END display star rating
+
+.c-product__info__text__cart {
+    display: flex;
+    margin-bottom: $vspace;
+    padding: $vspace 0;
+    border-top: 1px solid $color-primary;
+    border-bottom: 1px solid $color-primary;
+
+    input {
+        margin-right: $hspace/2;
+        width: 40px;
+        padding: 0 14px;
+    }
+}
+.c-product__info__text__cart__amount {
+    margin-right: $hspace/2;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    font-size: $font-size-medium;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+.c-product__info__text__category {
+    font-size: $font-size-small;
+    text-transform: capitalize;
+}
+.c-product__tabs {
+    line-height: 1.5;
+}
+.c-product__tabs__list {
+    width: 100%;
+    margin-bottom: $vspace*2;
+    text-transform: uppercase;
+}
+.c-product__tabs__list__item {
+    display: inline-block;
+    margin-right: $hspace;
+    padding-bottom: $vspace/2;
+    border-bottom: 2px solid transparent;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-primary;
+    }
+}
+.c-product__tabs__list__item.isActive {
+    color: $color-primary;
+    border-bottom: 2px solid $color-primary;
+}
+.c-product__tabs__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h4 {
+        width: 100%;
+        margin-bottom: $vspace;
+        font-weight: 700;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        margin-bottom: $vspace;
+        padding: $vspace/2 $hspace/2;
+        font-size: $font-size;
+    }
+
+    input {
+        width: 48%;
+        margin-bottom: $vspace;
+        padding: $vspace/2 $hspace/2;
+        font-size: $font-size;
+    }
+
+    button {
+        display: block;
+        padding: $vspace/2 $hspace;
+    }
+}
+.c-product__tabs__form__rating {
+    display: flex;
+    margin-bottom: $vspace;
+
+    input {
+        display: none;
+    }
+}
+.c-product__tabs__form__rating__star {
+    color: grey;
+
+    &:hover {
+        color: gold;
+    }
+}
+.c-product__tabs__form__rating__star.isActive {
+    color: gold;
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)
@@ -996,6 +997,234 @@ a {
 
 .c-productCard__info__price {
   color: red;
+}
+
+.c-product__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.c-product__image {
+  position: relative;
+  width: calc(50% - 20px);
+  margin-right: 20px;
+  padding-top: 50%;
+  border: 1px solid #272727;
+}
+
+.c-product__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.c-product__info__text {
+  width: 50%;
+}
+
+.c-product__info__title {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.c-product__info__price {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: red;
+}
+
+.c-product__info__teaser {
+  display: inline-block;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #272727;
+}
+
+.c-product__info__text__icons {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.c-product__info__text__icons li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+.c-product__info__text__icons svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: red;
+}
+
+.c-product__info__text__rating {
+  margin-bottom: 20px;
+}
+
+:root {
+  --star-color: grey;
+  --star-background: #fc0;
+}
+
+.c-product__info__text__rating__stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+  font-family: Times;
+  line-height: 1;
+}
+
+.c-product__info__text__rating__stars::before {
+  content: '★★★★★';
+  letter-spacing: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(var(--star-background)), to(var(--star-color)));
+  background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.c-product__info__text__cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #CD8B7C;
+  border-bottom: 1px solid #CD8B7C;
+}
+
+.c-product__info__text__cart input {
+  margin-right: 10px;
+  width: 40px;
+  padding: 0 14px;
+}
+
+.c-product__info__text__cart__amount {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #CD8B7C;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.c-product__info__text__cart__amount:hover {
+  cursor: pointer;
+}
+
+.c-product__info__text__category {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.c-product__tabs {
+  line-height: 1.5;
+}
+
+.c-product__tabs__list {
+  width: 100%;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.c-product__tabs__list__item {
+  display: inline-block;
+  margin-right: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.c-product__tabs__list__item:hover {
+  cursor: pointer;
+  color: #CD8B7C;
+}
+
+.c-product__tabs__list__item.isActive {
+  color: #CD8B7C;
+  border-bottom: 2px solid #CD8B7C;
+}
+
+.c-product__tabs__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.c-product__tabs__form h4 {
+  width: 100%;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.c-product__tabs__form p {
+  width: 100%;
+}
+
+.c-product__tabs__form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  font-size: 16px;
+}
+
+.c-product__tabs__form input {
+  width: 48%;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  font-size: 16px;
+}
+
+.c-product__tabs__form button {
+  display: block;
+  padding: 10px 20px;
+}
+
+.c-product__tabs__form__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.c-product__tabs__form__rating input {
+  display: none;
+}
+
+.c-product__tabs__form__rating__star {
+  color: grey;
+}
+
+.c-product__tabs__form__rating__star:hover {
+  color: gold;
+}
+
+.c-product__tabs__form__rating__star.isActive {
+  color: gold;
 }
 
 .c-newsletter {
