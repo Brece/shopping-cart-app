@@ -5,8 +5,8 @@
 }
 .c-product__image {
     position: relative;
-    width: calc(50% - #{$hspace});
-    margin-right: $hspace;
+    width: calc(50% - #{$hspace*2});
+    margin-right: $hspace*2;
     padding-top: 50%;
     border: 1px solid $color-bg-dark;
 
