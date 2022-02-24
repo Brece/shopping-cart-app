@@ -18,6 +18,21 @@ const Cart = () => {
         }
     }
 
+    const handleDelete = (e) => {
+
+    }
+
+    const handleIncreasingAmount = (e) => {
+        // search cart for item.id to increase/decrease amount
+        // update cart and localstorage at the same time
+        // dataset.id either on each button or once on parent container, dependent on html structure
+        console.log(e.target.dataset.id);
+    }
+
+    const handleDecreasingAmount = (e) => {
+
+    }
+
     const renderCartItems = () => {
         return (
             cart.map((item) => {
@@ -28,11 +43,11 @@ const Cart = () => {
                         </div>
                         <h3 className='c-cart__content__item__title'>{item.title}</h3>
                         <p className='c-cart__content__item__price'>{item.price}€</p>
-                        <button className='c-btn'>-</button>
+                        <div className='c-btn' data-id={item.id} onClick={handleDecreasingAmount} >-</div>
                         <p className='c-cart__content__item__amount'>{item.amount}</p>
-                        <button className='c-btn'>+</button>
+                        <div className='c-btn' data-id={item.id} onClick={handleIncreasingAmount}>+</div>
                         <p className='c-cart__content__item__total'>Total: {item.price * item.amount}€</p>
-                        <button className='c-btn'>delete item</button>
+                        <button className='c-btn' onClick={handleDelete} >delete item</button>
                     </div>
                 );
             })
