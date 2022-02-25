@@ -14,9 +14,19 @@ const Cart = () => {
         const shoppingCart = localStorage.getItem('cart');
         if (shoppingCart) {
             setCart(JSON.parse(shoppingCart));
+            handleTotal(JSON.parse(shoppingCart));
 
+            // FIXME: delete console.log
             console.log(JSON.parse(shoppingCart));
         }
+    }
+
+    const handleTotal = (updatedCart) => {
+        let newTotal = 0;
+        updatedCart.forEach((item) => {
+            newTotal += item.amount * item.price;
+        });
+        setTotal(newTotal);
     }
 
     const handleDelete = (e) => {
@@ -57,15 +67,7 @@ const Cart = () => {
         }
 
         setCart(updatedCart);
-    }
-
-    // TODO: create function for Total update
-    const handleTotal = () => {
-        let newTotal = 0;
-        cart.forEach((item) => {
-            newTotal += item.amount * item.price;
-        });
-        setTotal(newTotal);
+        handleTotal(updatedCart);
     }
 
     const handleCheckout = (e) => {
@@ -98,7 +100,6 @@ const Cart = () => {
 
     useEffect (() => {
         loadCart();
-        handleTotal();
     }, []);
 
     return (
