@@ -1,17 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
 const Breadcrumb = () => {
+    const [page, setPage] = useState();
     const location = useLocation();
 
-    // TODO:
-    // Link to the right url (first path link to "/")
-    // last path location is not a link, is highlighted as active
-    // connect locations with css style ">"
     const renderPath = () => {
         let paths = location.pathname
-            .split('/')
-            .filter((x) => x);
+        .split('/')
+        .filter((x) => x)
+        .map((x) => x.replaceAll('%20', ' '));
         
         return paths.map((path, index) => {
             if (index === paths.length - 1) {
@@ -37,9 +35,6 @@ const Breadcrumb = () => {
                 <Link
                     className='c-breadcrumb__item'
                     to={`${path}`}
-                    style={ ({isActive}) => {
-                        return { backgroundColor: isActive ? 'red' : '' } 
-                    }}
                     key={index} >
                     {path}
                 </Link>
@@ -48,13 +43,18 @@ const Breadcrumb = () => {
     }
 
     useEffect(() => {
-        // FIXME: remove console.log
-        console.log(location);
-    });
+        // set page when mounted to render the page title
+        let paths = location.pathname
+        .split('/')
+        .filter((x) => x);
+
+        setPage(paths[0]);
+    }, []);
 
     return (
         <section className='u-margin-bottom c-breadcrumb'>
             <div className='o-wrap'>
+                <h1 className='c-breadcrumb__title'>{page}</h1>
                 <div>{renderPath()}</div>
             </div>
         </section>

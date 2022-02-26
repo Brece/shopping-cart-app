@@ -99,7 +99,7 @@ const Cart = () => {
     }, []);
 
     return (
-        <section className='c-cart'>
+        <section className='u-margin-bottom c-cart'>
             <Breadcrumb />
             <div className='o-wrap c-cart__content'>
                 <div className='c-cart__content__header'>

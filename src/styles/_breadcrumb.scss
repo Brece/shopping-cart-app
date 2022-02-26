@@ -3,6 +3,12 @@
     padding: $vspace 0;
     background-color: $color-bg-light;
 }
+.c-breadcrumb__title {
+    margin-bottom: $hspace*2;
+    font-size: $font-size-xlarge;
+    font-weight: 700;
+    text-transform: capitalize;
+}
 .c-breadcrumb__item {
     position: relative;
     display: inline-block;
@@ -12,6 +18,11 @@
     font-weight: 700;
     text-transform: capitalize;
     overflow: hidden;
+
+    &:hover {
+        color: $color-primary;
+        cursor: pointer;
+    }
 }
 .c-breadcrumb__item::after {
     position: absolute;
@@ -25,4 +36,8 @@
 }
 .c-breadcrumb__item--last{
     color: $color-primary;
+
+    &:hover {
+        cursor: default;
+    }
 }
