@@ -1,2 +1,119 @@
-.c-cart__content {}
-.c-cart__content__item {}
+.c-cart {
+    margin-bottom: $vspace*4;
+}
+.c-cart__content__header {
+    display: flex;
+    margin-bottom: $vspace;
+    padding: $vspace 0;
+
+    h3 {
+        font-size: $font-size-medium;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-primary;
+    }
+
+    h3:nth-of-type(1) {
+        width: 500px;
+    }
+
+    h3:nth-of-type(2) {
+        width: 200px;
+    }
+
+    h3:nth-of-type(3), h3:nth-of-type(4) {
+        flex-grow: 1;
+    }
+}
+.c-cart__content__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: $vspace $hspace $vspace 0;
+    border-bottom: 2px solid $color-primary;
+}
+.c-cart__content__item__image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-right: $hspace;
+    
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100px;
+        max-height:100px;
+        width: auto;
+        height: auto;
+    }
+}
+.c-cart__content__item__title {
+    width: 360px;
+    margin-right: $hspace;
+    line-height: 1.5;
+}
+.c-cart__content__item__amount {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+
+    div {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.c-cart__content__item__price {
+    flex-grow: 1;
+}
+.c-cart__content__item__total {
+    flex-grow: 1;
+}
+.c-cart__content__item__delete {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: $vspace $hspace;
+    font-size: $font-size-medium;
+    color: red;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+.c-cart__content__total {
+    width: 100%;
+    margin: $vspace*2 0;
+    text-align: end;
+
+    p {
+        display: inline-block;
+        padding: $vspace/2 $hspace;
+        text-transform: uppercase;
+        font-size: $font-size-medium;
+        font-weight: 700;
+        border: 1px solid $color-primary;
+    }
+
+    p:last-of-type {
+        color: $color-bg-light;
+        background-color: $color-primary;
+    }
+}
+.c-cart__content__options {
+    display: flex;
+    justify-content: space-between;
+}

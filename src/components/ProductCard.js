@@ -11,7 +11,7 @@ const ProductCard = (props) => {
                 </div>
                 <div className='c-productCard__info'>
                     <p className='c-productCard__info__title'>{props.product.title}</p>
-                    <p className='c-productCard__info__price'>{props.product.price}€</p>
+                    <p className='c-productCard__info__price'>{props.product.price.toFixed(2)}€</p>
                     <p>Rating: {props.product.rating.rate} Stars ({props.product.rating.count})</p>
                 </div>
             </Link>

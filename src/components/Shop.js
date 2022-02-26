@@ -66,9 +66,6 @@ const Shop = () => {
             const request = await fetch('https://fakestoreapi.com/products', {mode: 'cors'});
             const data = await request.json();
             
-            // FIXME: remove console.log
-            // console.log(data.map(item => item));
-            
             handleState(data);
             return;
         } catch (err) {

@@ -77,7 +77,7 @@ const Product = () => {
                 </div>
                 <div className='c-product__info__text'>
                     <h3 className='c-product__info__title'>{state.title}</h3>
-                    <p className='c-product__info__price'>{state.price}€</p>
+                    <p className='c-product__info__price'>{state.price.toFixed(2)}€</p>
                     <p className='c-product__info__teaser'>{state.description}</p>
                     <ul className='c-product__info__text__icons'>
                         <li>

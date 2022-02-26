@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Breadcrumb from './Breadcrumb';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Cart = () => {
     const [cart, setCart] = useState([]);
@@ -15,9 +17,6 @@ const Cart = () => {
         if (shoppingCart) {
             setCart(JSON.parse(shoppingCart));
             handleTotal(JSON.parse(shoppingCart));
-
-            // FIXME: delete console.log
-            console.log(JSON.parse(shoppingCart));
         }
     }
 
@@ -26,20 +25,21 @@ const Cart = () => {
         updatedCart.forEach((item) => {
             newTotal += item.amount * item.price;
         });
-        setTotal(newTotal);
+        setTotal(newTotal.toFixed(2));
     }
 
     const handleDelete = (e) => {
-        const itemId = Number(e.target.parentElement.dataset.id);
+        const itemId = Number(e.currentTarget.parentElement.dataset.id);
         const updatedCart = cart.filter((item) => item.id !== itemId);
 
         setCart(updatedCart);
         updateLocalStorage(updatedCart);
+        handleTotal(updatedCart);
     }
 
     const handleAmount = (e) => {
-        const itemId = Number(e.target.parentElement.parentElement.dataset.id);
-        const operator = e.target.dataset.operator;
+        const itemId = Number(e.currentTarget.parentElement.parentElement.dataset.id);
+        const operator = e.currentTarget.dataset.operator;
         const updatedCart = [];
 
         cart.forEach((item) => {
@@ -67,6 +67,7 @@ const Cart = () => {
         }
 
         setCart(updatedCart);
+        updateLocalStorage(updatedCart);
         handleTotal(updatedCart);
     }
 
@@ -75,24 +76,12 @@ const Cart = () => {
         alert('As of now there is no backend connected for this project.');
     }
 
+    // FIXME: link to product view with product info as property
     const renderCartItems = () => {
         return (
             cart.map((item) => {
                 return (
-                    <div className='c-cart__content__item' data-id={item.id} key={item.id}>
-                        <div className='c-cart__content__item__image'>
-                            <img src={item.image} alt='Product' />
-                        </div>
-                        <h3 className='c-cart__content__item__title'>{item.title}</h3>
-                        <div className='c-cart__content__item__amount'>
-                            <div className='c-btn' data-operator='decrease' onClick={handleAmount} >-</div>
-                            <p>{item.amount}</p>
-                            <div className='c-btn' data-operator='increase' onClick={handleAmount}>+</div>
-                        </div>
-                        <p className='c-cart__content__item__price'>{item.price}€</p>
-                        <p className='c-cart__content__item__total'>Subtotal: {item.price * item.amount}€</p>
-                        <button className='c-btn' onClick={handleDelete}>delete item</button>
-                    </div>
+                    <CartItem item={item} handleAmount={handleAmount} handleDelete={handleDelete} key={item.id} />
                 );
             })
         );
@@ -114,8 +103,8 @@ const Cart = () => {
                 </div>
                 {renderCartItems()}
                 <div className='c-cart__content__total'>
-                    <h3>total</h3>
-                    <p>{total}</p>
+                    <p>total</p>
+                    <p>{total}€</p>
                 </div>
                 <div className='c-cart__content__options'>
                     <button className='c-btn' type='button'>
@@ -123,12 +112,52 @@ const Cart = () => {
                             back to shopping
                         </Link>
                     </button>
-                    <button className='c-btn' type='button' onClick={handleTotal} >recalculate</button>
-                    <button className='c-btn' type='button' onClick={handleCheckout} >proceed</button>
+                    <button className='c-btn' type='button' onClick={handleCheckout} >
+                        <Link to=''>
+                            proceed
+                        </Link>
+                    </button>
                 </div>
             </div>
         </section>
     );
+}
+
+const CartItem = (props) => {
+    // useNavigate gets the same results as <Link/>
+    // '/shop/...' is an absolute path while 'shop/...' isn't !!!
+    /*
+    let navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate(`/shop/${props.item.title}`, { state: props.item });
+    }
+    */
+
+    return (
+        <div className='c-cart__content__item' data-id={props.item.id}>
+            <div className='c-cart__content__item__image'>
+                <Link to={`/shop/${props.item.title}`} state={props.item}>
+                    <img src={props.item.image} alt='Product' />
+                </Link>
+            </div>
+            <h3 className='c-cart__content__item__title'>
+                <Link to={`/shop/${props.item.title}`} state={props.item}>
+                    {props.item.title}
+                </Link>
+            </h3>
+            <div className='c-cart__content__item__amount'>
+                <div data-operator='decrease' onClick={props.handleAmount} >-</div>
+                <p>{props.item.amount}</p>
+                <div data-operator='increase' onClick={props.handleAmount}>+</div>
+            </div>
+            <p className='c-cart__content__item__price'>{props.item.price.toFixed(2)}€</p>
+            <p className='c-cart__content__item__total'>{(props.item.price * props.item.amount).toFixed(2)}€</p>
+            <div className='c-cart__content__item__delete' onClick={props.handleDelete}>
+                <FontAwesomeIcon icon={faXmark} />
+            </div>
+        </div>
+    )
 }
 
 export default Cart;
