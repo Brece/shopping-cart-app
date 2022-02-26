@@ -25,6 +25,11 @@
         flex-grow: 1;
     }
 }
+.c-cart__content__empty {
+    margin-bottom: $vspace*4;
+    padding: $vspace*4 0;
+    font-size: $font-size;
+}
 .c-cart__content__item {
     position: relative;
     display: flex;

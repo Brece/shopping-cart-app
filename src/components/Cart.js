@@ -76,8 +76,15 @@ const Cart = () => {
         alert('As of now there is no backend connected for this project.');
     }
 
-    // FIXME: link to product view with product info as property
     const renderCartItems = () => {
+        if (cart.length === 0) {
+            return (
+                <div className='c-cart__content__empty'>
+                    <p>There are currently no items in Your shopping cart.</p>
+                </div>
+            );
+        }
+        
         return (
             cart.map((item) => {
                 return (

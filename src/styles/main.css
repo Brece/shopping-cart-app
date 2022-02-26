@@ -1260,6 +1260,12 @@ a {
           flex-grow: 1;
 }
 
+.c-cart__content__empty {
+  margin-bottom: 80px;
+  padding: 80px 0;
+  font-size: 16px;
+}
+
 .c-cart__content__item {
   position: relative;
   display: -webkit-box;
