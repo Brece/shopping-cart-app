@@ -9,10 +9,12 @@ import Home from './Home';
 import Contact from './Contact';
 import Cart from './Cart';
 import NotFound from './NotFound';
+import ScrollToTop from './ScrollToTop';
 
 const RouteSwitch = () => {
 	return (
 		<BrowserRouter>
+            <ScrollToTop />
             <Routes>
                 <Route path='/' element={<Layout />}>
                     <Route index element={<Home />} />
