@@ -8,8 +8,6 @@ import visa from '../assets/payment/visa.png';
 import paypal from '../assets/payment/paypal.png';
 
 const Footer = (props) => {
-    // TODO: newsletter, socials | contact info | payment options | copyright in footer
-
     return (
         <footer className='c-footer'>
             <Newsletter />

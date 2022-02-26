@@ -14,7 +14,7 @@ const Shop = () => {
 
     // ============ start pagination ==============
     const [page, setPage] = useState(0);
-    const [totalPages, setTotalPages] = useState(0)
+    const [totalPages, setTotalPages] = useState(1)
     const productsPerPage = 9;
     
     const handlePagination = () => {

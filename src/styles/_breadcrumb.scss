@@ -1,6 +1,7 @@
 .c-breadcrumb {
     width: 100%;
-    padding: $vspace 0;
+    padding-top: $vspace*2;
+    padding-bottom: $vspace/2;
     background-color: $color-bg-light;
 }
 .c-breadcrumb__title {
