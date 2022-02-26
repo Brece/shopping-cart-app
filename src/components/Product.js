@@ -46,11 +46,22 @@ const Product = () => {
             }
 
             localStorage.setItem('cart', JSON.stringify(cart));
+
+            // notification popup
+            togglePopupMessage();
             return;
         }
 
         // initiliaze localstorage as an Array of objects when cart doesn't exist
         localStorage.setItem('cart', JSON.stringify([{...state, amount}]));
+    }
+
+    const togglePopupMessage = () => {
+        const popup = document.querySelector('.c-product__info__text__cart__popup');
+        popup.classList.add('isActive');
+        setTimeout(() => {
+            popup.classList.remove('isActive');
+        }, 2500);
     }
 
     const handleCapitalizedDescription = () => {
@@ -101,6 +112,9 @@ const Product = () => {
                         <input type='text' value={amount} placeholder='1' onChange={handleChange} />
                         <div className='c-product__info__text__cart__amount' onClick={handleIncreasingAmount}>+</div>
                         <button type='button' className='c-btn c-product__info__text__cart__btn' onClick={handleAddToCart}>add to cart</button>
+                        <div className='c-product__info__text__cart__popup'>
+                            <p>Item has been added to Your shopping cart.</p>
+                        </div>
                     </div>
                     <p className='c-product__info__text__category'>Category: {state.category}</p>
                 </div>
