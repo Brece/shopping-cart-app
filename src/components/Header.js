@@ -5,7 +5,6 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/MyOnlineStore-logo/vector/default-monochrome.svg';
 
 const Header = () => {
-    const [state, setState] = useState([]);
     const [amount, setAmount] = useState(0);
 
     const handleState = () => {
@@ -17,15 +16,16 @@ const Header = () => {
                 totalAmount += item.amount;
             });
             setAmount(totalAmount);
-            setState(cart);
         }
     }
 
     useEffect (() => {
         handleState();
 
-        // FIXME: delete console.log
-        console.log(JSON.parse(localStorage.getItem('cart')));
+        // FIXME: unfortunatly it only updates the amount in real time in other tabs of the store not in the current one
+        window.addEventListener('storage', () => handleState());
+
+        return () => window.removeEventListener('storage', () => handleState());
     },[]);
 
     return (

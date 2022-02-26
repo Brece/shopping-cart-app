@@ -28,7 +28,6 @@ const Product = () => {
 
     const handleAddToCart = () => {
         let cart = JSON.parse(localStorage.getItem('cart'));
-        console.log(cart);
 
         if (cart !== null) {
             let itemIndex;
