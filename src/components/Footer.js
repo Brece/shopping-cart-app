@@ -13,7 +13,7 @@ const Footer = (props) => {
             <Newsletter />
             <section className='o-wrap o-wrap--flex u-justify-space-between'>
                 <div className='c-footer__socials'>
-                    <img src={logo} alt='Company Logo' className='c-footer__logo' />
+                    <img src={logo} alt='Company Logo' className='c-footer__socials__logo' />
                     <div className='c-footer__socials__items'>
                         <FontAwesomeIcon icon={faFacebook} />
                         <FontAwesomeIcon icon={faInstagram} />

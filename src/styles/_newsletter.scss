@@ -12,7 +12,7 @@
 .c-newsletter__form {
     display: flex;
     input {
-        width: 300px;
+        max-width: 300px;
         margin-right: $hspace/2;
         padding: $vspace/2 $hspace/2;
         font-size: $font-size;
@@ -23,4 +23,56 @@
     padding: $vspace/2 $hspace*2;
     color: $color-bg-light;
     border: 1px solid $color-bg-light;
+}
+
+@media screen and (max-width: 1000px) {
+    .c-newsletter__form {
+        input {
+            max-width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .c-newsletter__form {
+        input {
+            max-width: 150px;
+        }
+    }
+    .c-btn--subscribe {
+        padding: $vspace/2 $hspace/2;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .c-newsletter {
+        padding: $vspace 0;
+    
+        h2 {
+            font-size: $font-size-medium;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .c-newsletter h2 {
+        width: 100%;
+        margin-bottom: $vspace;
+    }
+    .c-newsletter__form {
+        width: 100%;
+        input {
+            max-width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .c-newsletter h2 {
+        margin-bottom: $vspace/2;
+        font-size: $font-size;
+    }
+    .c-newsletter__form input {
+        padding: $vspace/4 $hspace/4;
+    }
 }

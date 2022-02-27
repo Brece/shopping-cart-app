@@ -436,14 +436,14 @@ a {
   color: #F9F9F9;
 }
 
-.c-footer__logo {
-  margin-bottom: 20px;
-  width: 200px;
-}
-
 .c-footer__socials {
   -ms-flex-item-align: start;
       align-self: flex-start;
+}
+
+.c-footer__socials__logo {
+  margin-bottom: 20px;
+  width: 200px;
 }
 
 .c-footer__socials__items svg {
@@ -492,6 +492,16 @@ a {
   margin-right: 20px;
   width: 60px;
   height: 45px;
+}
+
+@media screen and (max-width: 640px) {
+  .c-footer__socials {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .c-footer__contact {
+    width: 100%;
+  }
 }
 
 .c-breadcrumb {
@@ -1723,7 +1733,7 @@ a {
 }
 
 .c-newsletter__form input {
-  width: 300px;
+  max-width: 300px;
   margin-right: 10px;
   padding: 10px 10px;
   font-size: 16px;
@@ -1734,6 +1744,53 @@ a {
   padding: 10px 40px;
   color: #F9F9F9;
   border: 1px solid #F9F9F9;
+}
+
+@media screen and (max-width: 1000px) {
+  .c-newsletter__form input {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .c-newsletter__form input {
+    max-width: 150px;
+  }
+  .c-btn--subscribe {
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .c-newsletter {
+    padding: 20px 0;
+  }
+  .c-newsletter h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .c-newsletter h2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .c-newsletter__form {
+    width: 100%;
+  }
+  .c-newsletter__form input {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .c-newsletter h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .c-newsletter__form input {
+    padding: 5px 5px;
+  }
 }
 
 .c-notFound {
