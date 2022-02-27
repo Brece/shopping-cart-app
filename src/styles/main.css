@@ -567,6 +567,27 @@ a {
   cursor: default;
 }
 
+@media screen and (max-width: 760px) {
+  .c-breadcrumb__title {
+    margin-bottom: 20px;
+    font-size: 45px;
+  }
+  .c-breadcrumb__item {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .c-breadcrumb__title {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+  .c-breadcrumb__item {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+}
+
 .c-contact__info {
   display: -webkit-box;
   display: -ms-flexbox;
