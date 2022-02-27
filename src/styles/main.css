@@ -217,6 +217,10 @@ a {
   .u-margin-bottom {
     margin-bottom: 60px;
   }
+  .u-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .c-btn a {
     padding: 10px 20px;
     font-size: 14px;
@@ -231,6 +235,10 @@ a {
   .u-margin-bottom {
     margin-bottom: 40px;
   }
+  .u-padding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -239,6 +247,10 @@ a {
   }
   .u-margin-bottom {
     margin-bottom: 20px;
+  }
+  .u-padding {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .c-btn a {
     font-size: 12px;
@@ -881,6 +893,8 @@ a {
 .c-team__member__item {
   width: calc(25% - 40px);
   margin: 0 20px 20px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .c-team__member__item h3 {
@@ -910,6 +924,19 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (max-width: 760px) {
+  .c-team__info h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .c-team__member__item {
+    width: calc(50% - 40px);
+    margin-bottom: 40px;
+  }
 }
 
 .c-content__item {

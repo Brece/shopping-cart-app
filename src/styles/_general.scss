@@ -110,6 +110,11 @@ a {
 @media screen and (max-width: 760px) {
     .u-margin-top { margin-top: $vspace*4; }
     .u-margin-bottom { margin-bottom: $vspace*3; }
+    .u-padding {
+        padding-top: $vspace*3;
+        padding-bottom: $vspace*3;
+    }
+
     .c-btn a {
         padding: $vspace/2 $hspace;
         font-size: $font-size-small;
@@ -122,10 +127,19 @@ a {
         margin-right: $hspace;
     }
     .u-margin-bottom { margin-bottom: $vspace*2; }
+    .u-padding {
+        padding-top: $vspace*2;
+        padding-bottom: $vspace*2;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .u-margin-top { margin-top: $vspace*3; }
     .u-margin-bottom { margin-bottom: $vspace; }
+    .u-padding {
+        padding-top: $vspace;
+        padding-bottom: $vspace;
+    }
+
     .c-btn a { font-size: $font-size-xsmall; }
 }
