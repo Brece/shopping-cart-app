@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/shopping-cart-app/static/css/main.d4755e62.css",
+    "main.css": "/shopping-cart-app/static/css/main.970ccec8.css",
     "main.js": "/shopping-cart-app/static/js/main.7924c4e9.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart-app/static/js/787.d6fe38e8.chunk.js",
     "static/media/Montserrat-Italic-VariableFont_wght.ttf": "/shopping-cart-app/static/media/Montserrat-Italic-VariableFont_wght.f578a4cdcf58b09e908f.ttf",
@@ -21,12 +21,12 @@
     "static/media/default-monochrome.svg": "/shopping-cart-app/static/media/default-monochrome.ccedcaaca8c1b6421e7969557a71496a.svg",
     "static/media/default-monochrome-white.svg": "/shopping-cart-app/static/media/default-monochrome-white.686e82b04fdaaa9aadbff3717832754a.svg",
     "index.html": "/shopping-cart-app/index.html",
-    "main.d4755e62.css.map": "/shopping-cart-app/static/css/main.d4755e62.css.map",
+    "main.970ccec8.css.map": "/shopping-cart-app/static/css/main.970ccec8.css.map",
     "main.7924c4e9.js.map": "/shopping-cart-app/static/js/main.7924c4e9.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart-app/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4755e62.css",
+    "static/css/main.970ccec8.css",
     "static/js/main.7924c4e9.js"
   ]
 }
