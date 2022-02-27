@@ -121,9 +121,11 @@ a {
         margin-left: $hspace;
         margin-right: $hspace;
     }
+    .u-margin-bottom { margin-bottom: $vspace*2; }
 }
 
 @media screen and (max-width: 480px) {
     .u-margin-top { margin-top: $vspace*3; }
+    .u-margin-bottom { margin-bottom: $vspace; }
     .c-btn a { font-size: $font-size-xsmall; }
 }
