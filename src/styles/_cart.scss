@@ -15,11 +15,20 @@
     }
 
     h3:nth-of-type(2) {
-        width: 200px;
+        flex: 1;
+        min-width: 120px;
+        margin-right: $hspace;
     }
 
-    h3:nth-of-type(3), h3:nth-of-type(4) {
-        flex-grow: 1;
+    h3:nth-of-type(3) {
+        flex: 1;
+        min-width: 80px;
+        margin-right: $hspace;
+    }
+    
+    h3:nth-of-type(4) {
+        flex: 1;
+        min-width: 120px;
     }
 }
 .c-cart__content__empty {
@@ -31,7 +40,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: $vspace $hspace $vspace 0;
+    padding: $vspace 0;
     border-bottom: 2px solid $color-primary;
 }
 .c-cart__content__item__image {
@@ -58,8 +67,10 @@
 }
 .c-cart__content__item__amount {
     display: flex;
+    flex: 1;
     align-items: center;
-    width: 200px;
+    min-width: 120px;
+    margin-right: $hspace;
 
     div {
         width: 24px;
@@ -77,18 +88,21 @@
     }
 
     p {
-        margin: 0 $hspace*2;
+        margin: 0 $hspace*1.5;
     }
 }
 .c-cart__content__item__price {
-    flex-grow: 1;
+    flex: 1;
+    min-width: 80px;
+    margin-right: $hspace;
 }
 .c-cart__content__item__total {
-    flex-grow: 1;
+    flex: 1;
+    min-width: 120px;
 }
 .c-cart__content__item__delete {
     position: absolute;
-    right: 0;
+    right: -20px;
     top: 50%;
     transform: translateY(-50%);
     padding: $vspace $hspace;
@@ -121,4 +135,46 @@
 .c-cart__content__options {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 760px) {
+    .c-cart__content__item__image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .c-cart__content__header {
+        h3 {
+            font-size: $font-size;
+        }
+    
+        h3:nth-of-type(2) {
+            min-width: 100px;
+        }
+    
+        h3:nth-of-type(3) {
+            min-width: 60px;
+        }
+        
+        h3:nth-of-type(4) {
+            display: none;
+        }
+    }
+    .c-cart__content__item__amount {
+        min-width: 100px;
+
+        p {
+            margin: 0 $hspace;
+        }
+    }
+    .c-cart__content__item__price {
+        min-width: 60px;
+    }
+    .c-cart__content__item__total {
+        display: none;
+    }
+    .c-cart__content__total p {
+        font-size: $font-size;
+    }
 }
