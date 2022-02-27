@@ -1403,8 +1403,8 @@ a {
   bottom: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .c-product__info__text {
@@ -1412,8 +1412,9 @@ a {
 }
 
 .c-product__info__title {
-  font-size: 22px;
   margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .c-product__info__price {
@@ -1627,6 +1628,28 @@ a {
 
 .c-product__tabs__form__rating__star.isActive {
   color: gold;
+}
+
+@media screen and (max-width: 640px) {
+  .c-product__image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .c-product__info__text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .c-product__info__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .c-product__info__price {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
 }
 
 .c-cart__content__header {

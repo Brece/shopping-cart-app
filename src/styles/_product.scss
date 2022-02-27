@@ -18,15 +18,16 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
 }
 .c-product__info__text {
     width: 50%;
 }
 .c-product__info__title {
-    font-size: $font-size-medium;
     margin-bottom: $vspace;
+    font-size: $font-size-medium;
+    font-weight: 700;
 }
 .c-product__info__price {
     margin-bottom: $vspace;
@@ -215,4 +216,26 @@
 }
 .c-product__tabs__form__rating__star.isActive {
     color: gold;
+}
+
+@media screen and (max-width: 640px) {
+    .c-product__image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: $vspace;
+    }
+    .c-product__info__text {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .c-product__info__title {
+        margin-bottom: $vspace/2;
+        font-size: $font-size;
+    }
+    .c-product__info__price {
+        margin-bottom: $vspace/2;
+        font-size: $font-size;
+    }
 }
