@@ -19,6 +19,16 @@ const Header = () => {
         }
     }
 
+    const handleHamburgerMenu = (e) => {
+        e.currentTarget.classList.toggle('isActive');
+        document.querySelector('.c-header__nav').classList.toggle('isActive');
+    }
+
+    const handleCloseHamburgerMenu = () => {
+        document.querySelector('.c-header__hamburger').classList.remove('isActive');
+        document.querySelector('.c-header__nav').classList.remove('isActive');
+    }
+
     useEffect (() => {
         handleState();
 
@@ -30,6 +40,11 @@ const Header = () => {
 
     return (
         <header className='c-header'>
+            <div className='c-header__hamburger' onClick={handleHamburgerMenu}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <div className='o-wrap o-wrap--flex u-justify-space-between'>
                 <div className='c-header__logo'>
                     <img src={logo} alt='Company Logo' />
@@ -37,19 +52,19 @@ const Header = () => {
                 <nav className='c-header__nav'>
                     <ul className='c-header__nav__list'>
                         <li>
-                            <Link to='/'>Home</Link>
+                            <Link to='/' onClick={handleCloseHamburgerMenu}>Home</Link>
                         </li>
                         <li>
-                            <Link to='/about'>About</Link>
+                            <Link to='/about' onClick={handleCloseHamburgerMenu}>About</Link>
                         </li>
                         <li>
-                            <Link to='/shop'>Shop</Link>
+                            <Link to='/shop' onClick={handleCloseHamburgerMenu}>Shop</Link>
                         </li>
                         <li>
-                            <Link to='/contact'>Contact</Link>
+                            <Link to='/contact' onClick={handleCloseHamburgerMenu}>Contact</Link>
                         </li>
                         <li className='c-header__nav__list__cart'>
-                            <Link to='/cart'>
+                            <Link to='/cart' onClick={handleCloseHamburgerMenu}>
                                 <span>Cart</span>
                                 <FontAwesomeIcon icon={faShoppingCart} />
                                 <div className='c-header__nav__list__cart__amount'>{amount}</div>

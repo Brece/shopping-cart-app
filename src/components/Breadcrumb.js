@@ -52,7 +52,7 @@ const Breadcrumb = () => {
     }, []);
 
     return (
-        <section className='u-margin-bottom c-breadcrumb'>
+        <section className='u-margin-bottom u-margin-top c-breadcrumb'>
             <div className='o-wrap'>
                 <h1 className='c-breadcrumb__title'>{page}</h1>
                 <div>{renderPath()}</div>

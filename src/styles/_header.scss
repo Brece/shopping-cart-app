@@ -1,7 +1,50 @@
 .c-header {
+    position: relative;
     padding: $vspace*1.5 0;
     background-color: $color-bg-light;
     border-bottom: 1px solid $color-primary;
+}
+.c-header__hamburger {
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 20px;
+    right: 40px;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    div {
+        position: relative;
+        width: 100%;
+        height: 5px;
+        border-radius: 10px;
+        transition: all .3s linear;
+        transform-origin: 1px;
+        opacity: 1;
+        background-color: $color-bg-dark;
+    }
+}
+.c-header__hamburger.isActive {
+    div:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    div:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    div:nth-child(3) {
+        transform: rotate(-45deg);
+    }
 }
 .c-header__logo { width: 200px; }
 .c-header__nav { width: 50%; }
@@ -11,7 +54,7 @@
     
     li {
         position: relative;
-        margin-left: $hspace/2;
+        margin-left: $hspace;
         &:hover::before {
             width: 100%;
         }
@@ -36,7 +79,7 @@
 }
 .c-header__nav__list__cart__amount {
     position: absolute;
-    right: -16px;
+    left: 60px;
     top: -4px;
     width: 20px;
     height: 20px;
@@ -48,4 +91,61 @@
     font-size: $font-size-small;
     line-height: 16px;
     text-align: center;
+}
+
+@media screen and (max-width: 870px) {
+    .c-header__nav { width: 60%; }
+}
+
+@media screen and (max-width: 760px) {
+    .c-header {
+        position: fixed;
+        z-index: 15;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: $vspace 0;
+    }
+    .c-header__hamburger { 
+        opacity: 1;
+        z-index: 15;
+    }
+    .c-header__nav {
+        position: absolute;
+        z-index: 10;
+        top: -20px;
+        right: -200%;
+        width: 70vw;
+        padding: $vspace*2 $hspace $vspace;
+        border: 1px solid $color-bg-dark;
+        background-color: $color-bg-light;
+        transition: all .3s ease-in-out;
+    }
+    .c-header__nav.isActive {
+        right: -40px;
+    }
+    .c-header__nav__list {
+        flex-direction: column;
+
+        li {
+            margin-bottom: $vspace;
+        }
+
+        li:hover::before {
+            width: 0;
+        }
+    }
+    .c-header__nav__list__cart__amount {
+        left: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .c-header {
+        padding: $vspace/2 0;
+    }
+    .c-header__hamburger { 
+        top: 10px;
+        right: 20px;
+    }
 }
