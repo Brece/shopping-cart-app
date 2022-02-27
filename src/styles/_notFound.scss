@@ -1,5 +1,6 @@
 .c-notFound {
     flex-direction: column;
+    margin-top: $vspace*3;
 
     h2 {
         margin-bottom: $vspace*3;
@@ -14,5 +15,11 @@
     
     span {
         font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .c-notFound {
+        margin-top: $vspace*6;
     }
 }

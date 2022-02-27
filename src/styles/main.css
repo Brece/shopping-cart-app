@@ -1989,6 +1989,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 60px;
 }
 
 .c-notFound h2 {
@@ -2004,6 +2005,12 @@ a {
 
 .c-notFound span {
   font-weight: 700;
+}
+
+@media screen and (max-width: 760px) {
+  .c-notFound {
+    margin-top: 120px;
+  }
 }
 
 /*=========================================================*/
