@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/shopping-cart-app/static/css/main.d4755e62.css",
+    "main.js": "/shopping-cart-app/static/js/main.7924c4e9.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart-app/static/js/787.d6fe38e8.chunk.js",
+    "static/media/Montserrat-Italic-VariableFont_wght.ttf": "/shopping-cart-app/static/media/Montserrat-Italic-VariableFont_wght.f578a4cdcf58b09e908f.ttf",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/shopping-cart-app/static/media/Montserrat-VariableFont_wght.3068cdb43142f5625baf.ttf",
+    "static/media/event-img-1.png": "/shopping-cart-app/static/media/event-img-1.ab71ec1000dab9ac7598.png",
+    "static/media/event-img-2.png": "/shopping-cart-app/static/media/event-img-2.336443e63cea411d9d7d.png",
+    "static/media/employee-2.jpg": "/shopping-cart-app/static/media/employee-2.299041e6ebf7b01dc832.jpg",
+    "static/media/employee-3.jpg": "/shopping-cart-app/static/media/employee-3.b70ec9b7d28032207d72.jpg",
+    "static/media/employee-1.jpg": "/shopping-cart-app/static/media/employee-1.a7e11bac9056f3330de7.jpg",
+    "static/media/employee-4.jpg": "/shopping-cart-app/static/media/employee-4.a4eb6cbd3a70314afe7a.jpg",
+    "static/media/about-us.jpg": "/shopping-cart-app/static/media/about-us.599877557a65e0020fc6.jpg",
+    "static/media/visa.png": "/shopping-cart-app/static/media/visa.0466a278a555b6bf1a19.png",
+    "static/media/paypal.png": "/shopping-cart-app/static/media/paypal.789c7c8272ffcd7c159a.png",
+    "static/media/hero-banner-2.jpg": "/shopping-cart-app/static/media/hero-banner-2.2802f87640492ba6cf4e.jpg",
+    "static/media/loading.png": "/shopping-cart-app/static/media/loading.ae31ab35c3322c06b0b9.png",
+    "static/media/hero-banner-1.jpg": "/shopping-cart-app/static/media/hero-banner-1.28b8b8215cbb489b0a97.jpg",
+    "static/media/hero-banner-3.jpg": "/shopping-cart-app/static/media/hero-banner-3.955665a8b56367261182.jpg",
+    "static/media/default-monochrome.svg": "/shopping-cart-app/static/media/default-monochrome.ccedcaaca8c1b6421e7969557a71496a.svg",
+    "static/media/default-monochrome-white.svg": "/shopping-cart-app/static/media/default-monochrome-white.686e82b04fdaaa9aadbff3717832754a.svg",
+    "index.html": "/shopping-cart-app/index.html",
+    "main.d4755e62.css.map": "/shopping-cart-app/static/css/main.d4755e62.css.map",
+    "main.7924c4e9.js.map": "/shopping-cart-app/static/js/main.7924c4e9.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart-app/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4755e62.css",
+    "static/js/main.7924c4e9.js"
+  ]
+}
