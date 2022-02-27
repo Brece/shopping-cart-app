@@ -1073,6 +1073,21 @@ a {
   color: #CD8B7C;
 }
 
+@media screen and (max-width: 640px) {
+  .c-services__item {
+    width: calc(100% - 40px);
+    padding: 20px 20px;
+    background-color: #F9F9F9;
+    border-radius: 6px;
+    box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 13px 5px rgba(0, 0, 0, 0.2);
+  }
+  .c-services__item::after {
+    display: none;
+  }
+}
+
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
