@@ -58,7 +58,6 @@
 }
 .c-cart__content__item__amount {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     width: 200px;
 
@@ -75,6 +74,10 @@
         &:hover {
             cursor: pointer;
         }
+    }
+
+    p {
+        margin: 0 $hspace*2;
     }
 }
 .c-cart__content__item__price {
