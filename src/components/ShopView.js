@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const ShopView = () => {
     return (
-        <section className='u-margin-bottom c-shop'>
+        <section className='u-margin-bottom'>
             <Breadcrumb />
             <Outlet />
         </section>

@@ -32,7 +32,7 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         transition: transform .3s ease-in-out;
     }
 }
@@ -45,4 +45,16 @@
 }
 .c-productCard__info__price {
     color: red;
+}
+
+@media screen and (max-width: 1000px) {
+    .c-productCard {
+        width: calc(50% - #{$hspace*2});
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .c-productCard {
+        width: calc(100% - #{$hspace*2});
+    }
 }
