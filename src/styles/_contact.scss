@@ -128,3 +128,26 @@
     padding: $vspace $hspace*2;
     color: $color-bg-light;
 }
+
+@media screen and (max-width: 870px) {
+    .c-contact__form__content {
+        width: 100%;
+        margin-right: 0;
+
+        h2 {
+            font-size: $font-size-medium;
+        }
+    }
+    .c-contact__form__map {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .c-contact__info {
+        flex-direction: column;
+    }
+    .c-contact__info__item {
+        width: calc(100% - #{$hspace*2});
+    }
+}

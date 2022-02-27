@@ -731,6 +731,31 @@ a {
   color: #F9F9F9;
 }
 
+@media screen and (max-width: 870px) {
+  .c-contact__form__content {
+    width: 100%;
+    margin-right: 0;
+  }
+  .c-contact__form__content h2 {
+    font-size: 22px;
+  }
+  .c-contact__form__map {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .c-contact__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .c-contact__info__item {
+    width: calc(100% - 40px);
+  }
+}
+
 .c-hero {
   position: relative;
 }
