@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './Layout';
 import About from './About';
 import ShopView from './ShopView';
@@ -25,7 +25,8 @@ const RouteSwitch = () => {
                     </Route>
                     <Route path='contact' element={<Contact />} />
                     <Route path='cart' element={<Cart />} />
-                    <Route path='*' element={<NotFound />} />
+                    <Route path='404' element={<NotFound />} />
+                    <Route path='*' element={<Navigate replace to='/404' />} />
                 </Route>
             </Routes>
         </BrowserRouter>
