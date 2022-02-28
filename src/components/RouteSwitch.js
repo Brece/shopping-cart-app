@@ -13,7 +13,7 @@ import ScrollToTop from './ScrollToTop';
 
 const RouteSwitch = () => {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename='/shopping-cart-app/'>
             <ScrollToTop />
             <Routes>
                 <Route path='/' element={<Layout />}>
