@@ -25,7 +25,7 @@ const RouteSwitch = () => {
                     </Route>
                     <Route path='contact' element={<Contact />} />
                     <Route path='cart' element={<Cart />} />
-                    <Route path='/404' element={<NotFound />} />
+                    <Route path='/?' element={<NotFound />} />
                     <Route path='*' element={<Navigate replace to='/404' />} />
                 </Route>
             </Routes>
