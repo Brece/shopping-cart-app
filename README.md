@@ -9,3 +9,8 @@ This project simulates a simple frontend for imaginary an E-commerce store with 
     - Javascript
     - CSS
     - HTML
+
+
+LIVE DEMO:
+
+https://brece.github.io/shopping-cart-app/shop
