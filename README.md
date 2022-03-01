@@ -13,4 +13,4 @@ This project simulates a simple frontend for imaginary an E-commerce store with 
 
 LIVE DEMO:
 
-https://brece.github.io/shopping-cart-app/shop
+https://brece.github.io/shopping-cart-app/
