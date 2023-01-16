@@ -39,7 +39,7 @@ const Footer = (props) => {
             </section>
             <section className='c-footer__payment'>
                 <div className='o-wrap o-wrap--flex u-justify-space-between'>
-                    <p>&copy; 2022 Designed and built by Nui Ruppert</p>
+                    <p>&copy; 2023 Designed and built by Nui Ruppert</p>
                     <div className='c-footer__payment__options'>
                         <img src={visa} alt='Payment Option Visa' />
                         <img src={paypal} alt='Payment Option Paypal' />
